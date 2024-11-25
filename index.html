@@ -1,0 +1,39 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Search Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="dropdown">
+            <button class="dropbtn" id="dropdownButton">Everything <span>▼</span></button>
+            <div class="dropdown-content">
+                <a href="#" onclick="setDropdownValue(this)">Everything</a>
+                <a href="#" onclick="setDropdownValue(this)">Software development</a>
+                <a href="#" onclick="setDropdownValue(this)">Web development</a>
+                <a href="#" onclick="setDropdownValue(this)">Data Analyst</a>
+                <a href="#" onclick="setDropdownValue(this)">IT Consultant</a>
+                <a href="#" onclick="setDropdownValue(this)">Network administrator</a>
+            </div>
+        </div>
+        <input type="text" class="search-input" placeholder="Search Anything">
+        <button class="search-btn">🔍</button>
+        
+    </div>
+
+    <script>
+        function setDropdownValue(element) {
+            document.getElementById("dropdownButton").innerHTML = element.innerHTML + ' <span>▼</span>';
+        }
+    </script>
+</body>
+</html>
+<style>
+        input::placeholder {
+            color: #a03d6b; /* Change to any color */
+            
+        }
+    </style>
